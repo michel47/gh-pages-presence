@@ -1,0 +1,1224 @@
+--- # DNS Records
+# vim: nospell noet
+
+freenom.com:
+ '*':
+  NS: &fn
+   - ns01.freenom.com
+   - ns02.freenom.com
+   - ns03.freenom.com
+   - ns04.freenom.com
+heliohost.org:
+ '*':
+  NS: &he
+   - ns1.heliohost.org
+   - ns2.heliohost.org
+netlify.com:
+ '*':
+  NS: &p1
+   - dns1.p01.nsone.net
+   - dns2.p01.nsone.net
+   - dns3.p01.nsone.net
+   - dns4.p01.nsone.net
+  NS: &p2
+   - dns1.p02.nsone.net
+google.com:
+ '*':
+  NS: &go
+   - ns-cloud-e1.googledomains.com
+   - ns-cloud-e2.googledomains.com
+   - ns-cloud-e3.googledomains.com
+   - ns-cloud-e4.googledomains.com
+   - dns1.p04.nsone.net
+   - dns2.p04.nsone.net
+   - dns3.p04.nsone.net
+   - dns4.p04.nsone.net
+   - lia.ns.cloudflare.com
+   - skip.ns.cloudflare.com
+   - ns1.heliohost.org
+   - ns2.heliohost.org
+# ------------------------------------------------------------------
+shqb.ml:
+ "*":
+  NS:
+   - dns1.p06.nsone.net
+   - dns2.p06.nsone.net
+   - dns3.p06.nsone.net
+   - dns4.p06.nsone.net
+#  - ns01.freenom.com
+   - ns1.heliohost.org
+ '@':
+  A: 104.198.14.52
+  ALIAS: modest-pare-29d464.netlify.com
+ www:
+  CNAME: modest-pare-29d464.netlify.com
+ contact:
+  RP:  m69.iph.heliohost.org contact.shqb.ml. .
+  TXT: "Michel COMBES, GCBANK, Chemin de la Chiesaz, CH-1024 Ecublens; +41 7676 0 9400"
+ registrar:
+  TXT: https://my.freenom.com/clientarea.php?managedns=shqb.ml&domainid=1067719391
+ memo:
+  TXT: "Self Health Quantification blockRing™"
+ _expires: { TXT: 31/07/2020 }
+# ------------------------------------------------------------------
+sniptext.com:
+ registrar: { TXT: "https://admin.google.com/sniptext.com/AdminHome#Domains" }
+ contact:
+  RP: "mailmaster.sniptext.com. ."
+ memo:
+  TXT: "Snip a Text (expired)"
+ _expires: { TXT: 15/10/2018 }
+
+gc-bank.tk:
+ '*':
+  NS:
+   - ns01.freenom.com
+   - ns02.freenom.com
+   - ns03.freenom.com
+   - ns04.freenom.com
+ '@':
+  A: 65.19.143.6
+  MX: 10 mail.mailinator.com
+ contact:
+  RP: "m-combes.gc-bank.org. ."
+ registrar:
+  TXT: https://my.freenom.com/clientarea.php?action=domaindetails&id=1058956748
+gc-bank.org:
+ '*':
+  NS:
+   - ns-cloud-e1.googledomains.com
+   - ns-cloud-e2.googledomains.com
+   - ns-cloud-e3.googledomains.com
+   - ns-cloud-e4.googledomains.com
+   #- dns1.p04.nsone.net
+   #- dns2.p04.nsone.net
+   #- dns3.p04.nsone.net
+   #- dns4.p04.nsone.net
+   #- cleo.ns.cloudflare.com
+   #- lola.ns.cloudflare.com
+ ns:
+  A: 65.19.143.3
+ '@':
+  A:
+   - 104.198.14.52
+   - 216.239.32.21
+   - 216.239.34.21
+   - 216.239.36.21
+   - 216.239.38.21
+  TXT: google-site-verification=wNazI0ZDUS9BsUjvQqCo52FJRhtV90PZFM27zH0n1OE
+  MX:
+   - ASPMX.L.GOOGLE.COM. 	1
+   - ALT1.ASPMX.L.GOOGLE.COM. 	5
+   - ALT2.ASPMX.L.GOOGLE.COM. 	5
+   - ASPMX2.GOOGLEMAIL.COM. 	10
+   - ASPMX3.GOOGLEMAIL.COM. 	10
+
+ contact:
+  RP: 
+   - "michelcombes.advancementofcivilizationeffort.org. ."
+   - micou.gc-bank.org. .
+   - m-combes.gc-bank.org. .
+  TXT:  021 581 2606
+ registrar:
+  TXT: https://domains.google.com/m/registrar/
+
+
+
+xn--mtd-sed.ml:
+ '*': { NS: *fn }
+ '@': { A: 127.0.0.1 }
+ _dnslink: { TXT: dnslink=/ipfs/zdj7WXZc6zmkX8J5CSpSuMTJtqfDcVqgMUJfkS1Vdefip4M5u }
+ www: { CNAME: www.cloudflare-ipfs.com }
+ 
+portfoliotm.tk:
+ '*': { NS: *fn }
+ '@':
+  A: &helio
+   65.19.143.6
+ www:
+  CNAME: cloudflare-ipfs.com
+  NAPTR: '10 99 "S" "email" "!^.*$!mailto:michel@iph.heliohost.org!" .' 
+ _dnslink.www: { TXT: dnslink=/ipfs/zdj7WXZc6zmkX8J5CSpSuMTJtqfDcVqgMUJfkS1Vdefip4M5u }
+ contact: &iph
+  RP: &rp1 "michel.iph.heliohost.org. contact.portfoliotm.tk."
+  TXT: &tx1 "Michel Col, route de Geneve, Lausanne, VD, CH-1015, +41"
+
+dpki.ml:
+ '*': {NS: *he }
+ contact: *iph
+tokentm.tk:
+ '*': {NS: *he }
+ contact: *iph
+tokentm.ml:
+ '*': {NS: *he }
+ contact: *iph
+proofs.ml:
+ '*': {NS: *he }
+ contact: *iph
+distributed.gq:
+ '*': {NS: *he }
+ contact: *iph
+distributed.ml:
+ '*': {NS: *he }
+ contact: *iph
+aniontm.ml:
+ '*': {NS: *he }
+ contact: *iph
+DHsm.tk:
+ '*': {NS: *he }
+ contact:
+   RP: *rp1
+valuetm.ml:
+ '*': {NS: *he }
+ contact: *iph
+semaphore.tk:
+ '*': {NS: *he }
+ contact: *iph
+talunc.gq:
+ '*': {NS: *he }
+ contact: *iph
+talentm.ga:
+ '*': {NS: *he }
+ contact: *iph
+QRsm.tk:
+ '*': {NS: *he }
+ contact: *iph
+decapital.ml:
+ '*': {NS: *he }
+ contact: *iph
+espoirtv.ml:
+ '*':
+  NS: *he
+ contact: *iph
+libretm.ml:
+ '*': {NS: *he }
+ contact: *iph
+media-libre.ml:
+ '*': {NS: *he }
+ contact: *iph
+medialibre.ml:
+ '*': {NS: *he }
+ contact: *iph
+u-topic.ml:
+ '*': {NS: *he }
+ contact: *iph
+humain.ml:
+ '*': {NS: *he }
+ contact: *iph
+humaine.ml:
+ '*': {NS: *he }
+ contact: *iph
+verite.ml:
+ '*': {NS: *he }
+ contact: *iph
+xn--vrit-bpad.tk:
+ '*': {NS: *he }
+ contact: *iph
+xn--vrit-bpad.ml:
+ '*': {NS: *he }
+ contact: *iph
+xn--tvrit-csad.ml:
+ '*': {NS: *he }
+ contact: *iph
+mrgtm.tk:
+ '*': {NS: *he }
+ contact: *iph
+lmrgtm.tk:
+ '*': {NS: *he }
+ contact: *iph
+rougetm.tk:
+ '*': {NS: *he }
+ contact: *iph
+appsm.tk:
+ '*': {NS: *he }
+ contact: *iph
+numerique.ml:
+ '*': {NS: *he }
+ contact: *iph
+gazettegj.ml:
+ '*': {NS: *he }
+ contact: *iph
+nodessm.tk:
+ '*': {NS: *he }
+ contact: *iph
+fstm.ga:
+ '*': {NS: *he }
+ contact: *iph
+fstm.ml:
+ '*': {NS: *he }
+ contact: *iph
+storetm.gq:
+ '*': {NS: *he }
+ contact: *iph
+sktm.tk:
+ '*': {NS: *he }
+ contact: *iph
+shtm.tk:
+ '*': {NS: *he }
+ contact: *iph
+yasm.ml:
+ '*': {NS: *he }
+ contact: *iph
+yotm.tk:
+ '*': {NS: *he }
+ contact: *iph
+cgism.ml:
+ '*': {NS: *fn }
+ www:
+  CNAME: cloudflare-ipfs.com
+ _dnslink.www: { TXT: dnslink=/ipfs/zdj7WXZc6zmkX8J5CSpSuMTJtqfDcVqgMUJfkS1Vdefip4M5u }
+ contact:
+   RP: "michel.iph.heliohost.org. contact.cgism.ml."
+   TXT: *tx1
+apitm.tk:
+ '*': {NS: *he }
+ contact: *iph
+justicesm.ml:
+ '*': {NS: *he }
+ contact: *iph
+logsm.ml:
+ '*': {NS: *he }
+ contact: *iph
+safetysm.ml:
+ '*': {NS: *he }
+ contact: *iph
+trustedtm.tk:
+ '*': {NS: *he }
+ contact: *iph
+in-or-out.tk:
+ '*': {NS: *he }
+ contact: *iph
+inorout.tk:
+ '*': {NS: *he }
+ contact: *iph
+electrical-engineers.tk:
+ '@':
+  A: *helio
+  MX: 10 mail.mailinator.com
+ www:
+  CNAME: cloudflare-ipfs.com
+ _dnslink.www: { TXT: dnslink=/ipfs/Z22zMR7FdErQB8cBv6RrFedKjWKBqC5uUJH96sRDHY7BBtZKUSz5vxpntm8DXSCuMKorX }
+ contact: &ace
+   RP: michelcombes.advancementofcivilizationeffort.org. .
+ '*':
+  NS: *fn
+  _date: { TXT: "26/09/2018 	26/09/2019 	Active 	Free 	Manage Domain" }
+iphs.ga:
+ '@':
+  A: *helio
+  MX: 10 mail.mailinator.com
+ www:
+  CNAME: cloudflare-ipfs.com
+ _dnslink.www: { TXT: dnslink=/ipfs/Z22zMR7FdErQB8cBvrfnHLDFZ49JaLggJN5K5UNSoFBrYGQoPpgx5hcxRxW77SU48TQQr }
+ contact: *ace
+ _expires:
+  TXT: "26/09/2019"
+ '*':
+  NS: *fn
+  _date: { TXT: "iphs.ga 	26/09/2018 	26/09/2019 	Active 	Free 	Manage Domain" }
+shared.gq:
+ '@':
+  A: 127.0.0.1
+  MX: 10 mail.mailinator.com
+ www:
+  CNAME: cloudflare-ipfs.com
+ _dnslink.www: { TXT: dnslink=/ipfs/Z22zMR7FdErQB8cBvoppRwLCMLXDPAqSHR28khHp4rviEiojAUbHc8fBTuesJBAsRZB4P }
+ contact: *ace
+ _expires: { TXT: 05/10/2019 }
+ '*':
+  NS: *fn
+ _date:
+   TXT: "sharded.gq 	05/10/2018 	05/10/2019 	Active 	Free 	Manage Domain "
+
+mutable.gq:
+ '@':
+  A: 65.19.143.6
+  MX: 10 mail.mailinator.com
+ www:
+  CNAME: cloudflare-ipfs.com
+ _dnslink.www: { TXT: dnslink=/ipfs/Z22zMR7FdErQB8cBvnutCKe5GpbCwbLXw6sSE5g94fj72X7ymsjaSeSraqXwG2XKL9Zwi }
+ contact: *ace
+ _expires: { TXT: 21/10/2019 }
+ '*':
+  NS: *fn
+  _date: { TXT: "mutable.gq 	21/10/2018 	21/10/2019 	Active 	Free 	Manage Domain " }
+
+domain.ace:
+ '*':
+  NS: *fn
+ '@':
+  RP: "michelcombes.advancementofcivilizationeffort.org. ."
+ contact: { TXT: "michelcombes@ace: (login on latop)" }
+ _dates: |-
+  toxiq.tk 	19/10/2018 	19/10/2019 	Active 	Free 	Manage Domain 
+  knowledger.tk 	19/10/2018 	19/10/2019 	Active 	Free 	Manage Domain 
+  dworld.gq 	19/10/2018 	19/10/2019 	Active 	Free 	Manage Domain 
+  sayitlouder.cf 	19/10/2018 	19/10/2019 	Active 	Free 	Manage Domain 
+  sayitlouder.tk 	19/10/2018 	19/10/2019 	Active 	Free 	Manage Domain 
+  sayitlouder.gq 	19/10/2018 	19/10/2019 	Active 	Free 	Manage Domain 
+  adlt.tk 	20/10/2018 	20/10/2019 	Active 	Free 	Manage Domain 
+  iplt.tk 	22/10/2018 	22/10/2019 	Active 	Free 	Manage Domain 
+  irfo.cf 	01/11/2018 	01/11/2019 	Active 	Free 	Manage Domain 
+  irfo.tk 	01/11/2018 	01/11/2019 	Active 	Free 	Manage Domain 
+  xn--one--ou3b.tk 	03/11/2018 	03/11/2019 	Active 	Free 	Manage Domain 
+  xn--one--ow4b.tk 	03/11/2018 	03/11/2019 	Active 	Free 	Manage Domain 
+  xn--g77hka.ml 	04/11/2018 	04/11/2019 	Active 	Free 	Manage Domain 
+  xn--g77hka.cf 	04/11/2018 	04/11/2019 	Active 	Free 	Manage Domain 
+  xn--g77hka.ga 	04/11/2018 	04/11/2019 	Active 	Free 	Manage Domain 
+  xn--ug8h.gq 	04/11/2018 	04/09/2019 	Active 	Free 	Manage Domain 
+  xn--nw8h.tk 	04/11/2018 	04/10/2019 	Active 	Free 	Manage Domain 
+  xn--nw8h.gq 	04/11/2018 	04/11/2019 	Active 	Free 	Manage Domain 
+  xn--4s8h.tk 	04/11/2018 	04/11/2019 	Active 	Free 	Manage Domain 
+  xn--4s8h.gq 	04/11/2018 	04/11/2019 	Active 	Free 	Manage Domain 
+  xn--mt8h.tk 	04/11/2018 	04/11/2019 	Active 	Free 	Manage Domain 
+  xn--mt8h.ml 	04/11/2018 	04/11/2019 	Active 	Free 	Manage Domain 
+  xn--nw8h.ml 	04/11/2018 	04/11/2019 	Active 	Free 	Manage Domain 
+  ricorg.gq 	18/12/2018 	18/12/2019 	Active 	Free 	Manage Domain 
+  ricord.tk 	18/12/2018 	18/12/2019 	Active 	Free 	Manage Domain 
+  ricord.ml 	18/12/2018 	18/12/2019 	Active 	Free 	Manage Domain 
+  jaune.gq 	22/12/2018 	22/12/2019 	Active 	Free 	Manage Domain 
+  voter.gq 	06/01/2019 	06/01/2020 	Active 	Free 	Manage Domain 
+  xn--evolution-fna.gq 	06/01/2019 	06/01/2020 	Active 	Free 	Manage Domain 
+  xn--assemble-h1a.ga 	06/01/2019 	06/01/2020 	Active 	Free 	Manage Domain 
+  xn--j77hya.tk 	06/01/2019 	06/01/2020 	Active 	Free 	Manage Domain 
+  xn--j77hya.ga 	06/01/2019 	06/01/2020 	Active 	Free 	Manage Domain 
+  xn--j77hya.gq 	06/01/2019 	06/01/2020 	Active 	Free 	Manage Domain 
+  citoyenne.ml 	06/01/2019 	06/01/2020 	Active 	Free 	Manage Domain 
+  citoyenne.gq 	06/01/2019 	06/01/2020 	Active 	Free 	Manage Domain 
+
+one42.ml:
+ '@':
+  A: 65.19.143.6
+  MX: 10 mail.mailinator.com
+  TXT: "Michel Combes (we are One), 66 rue de Castagnary, FR-75015 Paris, +33 627409046"
+ www:
+  CNAME: cloudflare-ipfs.com
+ _dnslink.www: { TXT: dnslink=/ipfs/Z22zMR7FdErQB8cBvGdMd8hwECo4uJmrEySNrrKu4GHTUTPjWScDf5taCp8w9pAHUNiJa }
+ contact: &paris
+   PR: michelcombes.advancementofcivilizationeffort.org. one42.gq
+ _expires: { TXT: 27/02/2020 }
+ '*':
+  NS: *fn
+  _date: { TXT: "one42.ml 	27/02/2019 	27/02/2020 	Active 	Free 	Manage Domain " }
+
+sparktm.tk:
+ _expires: { TXT: 29/02/2020 }
+ contact: *paris
+ '*':
+   NS: *fn
+   _date: { TXT: "sparktm.tk 	28/02/2019 	29/02/2020 	Active 	Free 	Manage Domain " }
+
+sparkstm.gq:
+ contact: *paris
+ '*':
+   NS : *fn
+   _date: { TXT: "sparkstm.gq 	28/02/2019 	29/02/2020 	Active 	Free 	Manage Domain " }
+
+michelc.tk:
+ # see [*](https://www.rfc-editor.org/rfc/rfc1183.txt)
+ '@': { TXT: "Michel C. (614) 526 4268, don't call me, send me text instead!" }
+
+csap.ml:
+ _expires: { TXT: 10/04/2020 }
+ '@':
+  A: 104.198.14.52
+  ALIAS: elegant-hawking-4dc6f9.netlify.com.
+ www:
+  CNAME: elegant-hawking-4dc6f9.netlify.com
+ '*':
+  NS:
+   - dns1.p03.nsone.net
+   - dns2.p03.nsone.net
+   - dns3.p03.nsone.net
+   - dns4.p03.nsone.net
+#  - ns01.freenom.com
+   - ns1.heliohost.org
+
+ contact: &mcgcb
+  RP: "m-combes.gc-bank.org. contact.csap.ml."
+  TXT: "Michel Combes, Ecublens, +41 7676 0 9400"
+ memo:
+  TXT: "Crypto Seed Accountancy Plateform (CSAP™)"
+  _date: { TXT: "csap.ml 	10/04/2019 	10/04/2020 	Active 	Free 	Manage Domain " }
+
+ydentity.ml:
+ _expires: { TXT: 24/02/2020 }
+ '@':
+  A: 104.198.14.52
+  ALIAS: name.netlify.com.
+ www:
+  CNAME: name.netlify.com
+ '*':
+  NS:
+   - ns01.freenom.com
+  MX: mail.mailinator.com 10
+ contact: *mcgcb
+ memo:
+  TXT: "Self Sovereign Identity (Ydent™)"
+ _date: { TXT: "ydentity.ml 	24/02/2019 	24/02/2020 	Active 	Free 	Manage Domain " }
+
+m.combes@gc-bank.org:
+ contact:
+  RP: m-combes.gc-bank.org. .
+ 'pending':
+  TXT: 
+   - biobot.tk 	15/11/2018 	15/11/2019 	Active 	Free 	Manage Domain 
+   - gc-banktm.com 	19/11/2018 	19/11/2019 	Active 	Paid 	Manage Domain 
+   - gc-banksm.tk 	15/11/2018 	15/11/2019 	Active 	Free 	Manage Domain 
+   - gc-bank.tk 	27/03/2019 	27/03/2020 	Active 	Free 	Manage Domain 
+   - safersm.ml 	17/02/2019 	17/02/2020 	Active 	Free 	Manage Domain 
+   - spottm.ml 	06/03/2019 	06/03/2020 	Active 	Free 	Manage Domain 
+   - one42.tk 	14/02/2019 	14/02/2020 	Active 	Free 	Manage Domain 
+
+   - unsm.ml 	14/02/2019 	14/02/2020 	Active 	Free 	Manage Domain 
+   - unstm.tk 	14/02/2019 	14/02/2020 	Active 	Free 	Manage Domain 
+   - tagsm.tk 	14/02/2019 	14/02/2020 	Active 	Free 	Manage Domain 
+   - tagsm.ml 	14/02/2019 	14/02/2020 	Active 	Free 	Manage Domain 
+   - micheliumtm.ml 	14/02/2019 	14/02/2020 	Active 	Free 	Manage Domain 
+   - michelium.tk 	14/02/2019 	14/02/2020 	Active 	Free 	Manage Domain 
+   - primesm.ml 	24/02/2019 	24/02/2020 	Active 	Free 	Manage Domain 
+   - publink.tk 	17/02/2019 	17/02/2020 	Active 	Free 	Manage Domain 
+   - publink.ml 	17/02/2019 	17/02/2020 	Active 	Free 	Manage Domain 
+   - unspam.tk 	17/02/2019 	17/02/2020 	Active 	Free 	Manage Domain 
+   - oooba.tk 	11/03/2019 	11/03/2020 	Active 	Free 	Manage Domain 
+   - gjcomptage.tk 	25/03/2019 	25/03/2020 	Active 	Free 	Manage Domain 
+   - spottm.ml 	06/03/2019 	06/03/2020 	Active 	Free 	Manage Domain 
+   - pinsm.ml 	07/03/2019 	07/03/2020 	Active 	Free 	Manage Domain 
+ '*':
+  NS: *fn
+ '@':
+  RP: m-combes.gc-bank.org. .
+ _dates: |-
+  biobot.tk 	15/11/2018 	15/11/2019 	Active 	Free 	Manage Domain 
+  redlabeltm.tk 	15/11/2018 	15/11/2019 	Active 	Free 	Manage Domain 
+  dlttm.ml 	15/11/2018 	15/11/2019 	Active 	Free 	Manage Domain 
+  dlttm.tk 	15/11/2018 	15/11/2019 	Active 	Free 	Manage Domain 
+  labelsm.tk 	15/11/2018 	15/11/2019 	Active 	Free 	Manage Domain 
+  trademarksm.ml 	15/11/2018 	15/11/2019 	Active 	Free 	Manage Domain 
+  gcoinstm.tk 	15/11/2018 	15/11/2019 	Active 	Free 	Manage Domain 
+  gc-banktm.com 	19/11/2018 	19/11/2019 	Active 	Paid 	Manage Domain 
+  xn--bitcoin-7g8c.tk 	15/11/2018 	15/11/2019 	Active 	Free 	Manage Domain 
+  gc-banktm.tk 	15/11/2018 	15/11/2019 	Active 	Free 	Manage Domain 
+  gc-banksm.tk 	15/11/2018 	15/11/2019 	Active 	Free 	Manage Domain 
+  happycoin.cf 	15/11/2018 	15/11/2019 	Active 	Free 	Manage Domain 
+  happycoin.gq 	15/11/2018 	15/11/2019 	Active 	Free 	Manage Domain 
+  atsm.tk 	15/11/2018 	15/11/2019 	Active 	Free 	Manage Domain 
+  labeltm.ml 	14/02/2019 	14/02/2020 	Active 	Free 	Manage Domain 
+  one42.tk 	14/02/2019 	14/02/2020 	Active 	Free 	Manage Domain 
+  gcoin.ml 	14/02/2019 	14/02/2020 	Active 	Free 	Manage Domain 
+  sunride.gq 	14/02/2019 	14/02/2020 	Active 	Free 	Manage Domain 
+  sunride.tk 	14/02/2019 	14/02/2020 	Active 	Free 	Manage Domain 
+  sunride.ml 	14/02/2019 	14/02/2020 	Active 	Free 	Manage Domain 
+  unsm.ml 	14/02/2019 	14/02/2020 	Active 	Free 	Manage Domain 
+  unstm.tk 	14/02/2019 	14/02/2020 	Active 	Free 	Manage Domain 
+  tagsm.tk 	14/02/2019 	14/02/2020 	Active 	Free 	Manage Domain 
+  tagsm.ml 	14/02/2019 	14/02/2020 	Active 	Free 	Manage Domain 
+  micheliumtm.ml 	14/02/2019 	14/02/2020 	Active 	Free 	Manage Domain 
+  michelium.tk 	14/02/2019 	14/02/2020 	Active 	Free 	Manage Domain 
+  toxiq.ga 	15/02/2019 	15/02/2020 	Active 	Free 	Manage Domain 
+  toxicsm.ml 	15/02/2019 	15/02/2020 	Active 	Free 	Manage Domain 
+  safersm.ml 	17/02/2019 	17/02/2020 	Active 	Free 	Manage Domain 
+  publink.tk 	17/02/2019 	17/02/2020 	Active 	Free 	Manage Domain 
+  publink.ml 	17/02/2019 	17/02/2020 	Active 	Free 	Manage Domain 
+  unspam.tk 	17/02/2019 	17/02/2020 	Active 	Free 	Manage Domain 
+  erlyb.gq 	18/02/2019 	18/02/2020 	Active 	Free 	Manage Domain 
+  birdstm.ga 	18/02/2019 	18/02/2020 	Active 	Free 	Manage Domain 
+  frontiertm.tk 	18/02/2019 	18/02/2020 	Active 	Free 	Manage Domain 
+  nogafa.ga 	18/02/2019 	18/02/2020 	Active 	Free 	Manage Domain 
+  bigtm.gq 	18/02/2019 	18/02/2020 	Active 	Free 	Manage Domain 
+  mom-n-poptm.cf 	18/02/2019 	18/02/2020 	Active 	Free 	Manage Domain 
+  xn--pv8h.ml 	18/02/2019 	18/02/2020 	Active 	Free 	Manage Domain 
+  xn--b9g.ml 	21/02/2019 	21/02/2020 	Active 	Free 	Manage Domain 
+  primesm.ml 	24/02/2019 	24/02/2020 	Active 	Free 	Manage Domain 
+  ydentity.ml 	24/02/2019 	24/02/2020 	Active 	Free 	Manage Domain 
+  gossipsm.gq 	24/02/2019 	24/02/2020 	Active 	Free 	Manage Domain 
+  spottm.ml 	06/03/2019 	06/03/2020 	Active 	Free 	Manage Domain 
+  pinsm.ml 	07/03/2019 	07/03/2020 	Active 	Free 	Manage Domain 
+  triplepin.tk 	07/03/2019 	07/03/2020 	Active 	Free 	Manage Domain 
+  oooba.tk 	11/03/2019 	11/03/2020 	Active 	Free 	Manage Domain 
+  gjcomptage.tk 	25/03/2019 	25/03/2020 	Active 	Free 	Manage Domain 
+  gc-bank.tk 	27/03/2019 	27/03/2020 	Active 	Free 	Manage Domain 
+  csap.ml 	10/04/2019 	10/04/2020 	Active 	Free 	Manage Domain 
+  
+
+u-nion.ml:
+ _expires: { TXT: 22/01/2020 }
+ "*":
+  NS: *fn
+ "@":
+  A: 104.198.14.52
+  MX: 10 mail.mailinator.com
+ www:
+  CNAME: trusting-davinci-ad78d0.netlify.com
+ _date:
+  TXT: "u-nion.ml 	22/01/2019 	22/01/2020 	Active 	Free 	Manage Domain "
+
+worldy.ml:
+ "*":
+  NS:
+   - SOFIA.NS.CLOUDFLARE.COM
+   - VICK.NS.CLOUDFLARE.COM
+worldy.gq:
+ "@":
+  A: 104.198.14.52
+worldy.ga:
+ "@":
+  A: 104.198.14.52
+worldy.cf:
+ "@":
+  A: 104.198.14.52
+legranddebat.ml:
+legranddebat.gq:
+xn--legranddbat-ibb.gq:
+xn--granddbat-g4a.tk:
+opposition.gq:
+unctm.gq:
+ "*":
+  NS: *he
+flattm.cf:
+ "@": { A: 104.198.14.52 }
+bringtm.ml:
+ "@":
+  A: 104.198.14.52
+technologytm.gq:
+ "@":
+  A: 104.198.14.52
+ www:
+  A: 104.198.14.52
+ organic:
+  A: 104.198.14.52
+
+keysm.ml:
+ "@":
+  A: 104.198.14.52
+ioetm.ml:
+ "@":
+  A: 104.198.14.52
+ www:
+  A: 104.198.14.52
+resumesm.gq:
+ "@":
+  A: 104.198.14.52
+techtm.gq:
+ "@":
+  A: 104.198.14.52
+ "*":
+  NS: *fn
+incsn.gq:
+ "@":
+  A: 104.198.14.52
+motm.ml:
+ "@":
+  A: 104.198.14.52
+oneland.gq:
+ "@":
+  A: 104.198.14.52
+xn--q-4lb.ml:
+ "@":
+  A: 104.198.14.52
+xn--mtd-sed.ml:
+ "@":
+  A: 104.198.14.52
+ www: { CNAME: www.cloudflare-ipfs.com }
+ _dnslink: { TXT: "dnslink=/ipfs/zdj7WXZc6zmkX8J5CSpSuMTJtqfDcVqgMUJfkS1Vdefip4M5u" }
+xn--rsum-bpad.tk:
+ "@":
+  A: 104.198.14.52
+ www:
+  A: 104.198.14.52
+ _date:
+  TXT: "xn--rsum-bpad.tk 	15/08/2019 	15/08/2020 	Active 	Free 	Manage Domain "
+opposition.gq:
+ "*":
+  NS: *he
+selfQ.ml:
+ "@":
+  A: 104.198.14.52
+
+u-nion.info:
+ "*":
+  NS: *he
+ "@": { RP: "mgcombes.gmail.com. contact.u-nion.info." }
+ contact: { TXT: "Michel Combes (gmail)" }
+bring.sniptext.com:
+ "@": { RP: "bring.sniptext.com. ." }
+ contact:
+  TXT:
+   - "gecos=Gregory Sheffield, bring@sniptext.com, +41 41 678 2008"
+   - "addr1=Srickstrasse 8, Zug, CH-6301"
+ _dates: |-
+  blockrings.tk 	15/08/2018 	15/08/2020 	Active 	Free 	Manage Domain 
+  worldy.ml 	19/10/2018 	19/10/2019 	Active 	Free 	Manage Domain 
+  worldy.ga 	19/10/2018 	19/10/2019 	Active 	Free 	Manage Domain 
+  worldy.cf 	19/10/2018 	19/10/2019 	Active 	Free 	Manage Domain 
+  worldy.gq 	19/10/2018 	19/10/2019 	Active 	Free 	Manage Domain 
+  legranddebat.ml 	21/01/2019 	21/01/2020 	Active 	Free 	Manage Domain 
+  legranddebat.gq 	21/01/2019 	21/01/2020 	Active 	Free 	Manage Domain 
+  xn--legranddbat-ibb.gq 	21/01/2019 	21/01/2020 	Active 	Free 	Manage Domain 
+  xn--granddbat-g4a.tk 	21/01/2019 	21/01/2020 	Active 	Free 	Manage Domain 
+  unctm.gq 	22/01/2019 	22/01/2020 	Active 	Free 	Manage Domain 
+  opposition.gq 	22/01/2019 	22/01/2020 	Active 	Free 	Manage Domain 
+  hooksm.ml 	14/08/2019 	14/08/2020 	Active 	Free 	Manage Domain 
+  flattm.cf 	14/08/2019 	14/08/2020 	Active 	Free 	Manage Domain 
+  flattm.tk 	14/08/2019 	14/08/2020 	Active 	Free 	Manage Domain 
+  ipms.ml 	14/08/2019 	14/08/2020 	Active 	Free 	Manage Domain 
+  keysm.ml 	14/08/2019 	14/08/2020 	Active 	Free 	Manage Domain 
+  moncv.gq 	14/08/2019 	14/08/2020 	Active 	Free 	Manage Domain 
+  bringtm.ml 	14/08/2019 	14/08/2020 	Active 	Free 	Manage Domain 
+  presencesm.tk 	14/08/2019 	14/08/2020 	Active 	Free 	Manage Domain 
+  thetransitioner.ml 	15/08/2019 	15/08/2020 	Active 	Free 	Manage Domain 
+  techtm.gq 	15/08/2019 	15/08/2020 	Active 	Free 	Manage Domain 
+  incsm.gq 	15/08/2019 	15/08/2020 	Active 	Free 	Manage Domain 
+  mottm.ml 	15/08/2019 	15/08/2020 	Active 	Free 	Manage Domain 
+  oneland.gq 	15/08/2019 	15/08/2020 	Active 	Free 	Manage Domain 
+  resumesm.gq 	15/08/2019 	15/08/2020 	Active 	Free 	Manage Domain 
+  xn--q-4lb.ml 	15/08/2019 	15/08/2020 	Active 	Free 	Manage Domain 
+  xn--mtd-sed.ml 	15/08/2019 	15/08/2020 	Active 	Free 	Manage Domain 
+  xn--rsum-bpad.tk 	15/08/2019 	15/08/2020 	Active 	Free 	Manage Domain 
+  ioetm.ml 	01/09/2019 	01/09/2020 	Active 	Free 	Manage Domain 
+  technologytm.gq 	01/09/2019 	01/09/2020 	Active 	Free 	Manage Domain 
+  jekyll.tk 	01/09/2019 	01/09/2020 	Active 	Free 	Manage Domain 
+  selfq.ml 	02/09/2019 	02/09/2020 	Active 	Free 	Manage Domain 
+  recordsm.gq 	02/09/2019 	02/09/2020 	Active 	Free 	Manage Domain 
+  pehr.ml 	02/09/2019 	02/09/2020 	Active 	Free 	Manage Domain 
+  commons.ga 	02/09/2019 	02/09/2020 	Active 	Free 	Manage Domain 
+  brase.gq 	03/09/2019 	03/09/2020 	Active 	Free 	Manage Domain 
+  rainbow.ml 	03/09/2019 	03/09/2020 	Active 	Free 	Manage Domain 
+  estm.tk 	03/09/2019 	03/09/2020 	Active 	Free 	Manage Domain 
+  acmetm.gq 	03/09/2019 	03/09/2020 	Active 	Free 	Manage Domain 
+
+"mgcombes@gmail.com":
+ "@": { RP: "mgcombes.gmail.com. ." }
+ contact:
+  TXT: "Michel G. Combes"
+ _dates: |-
+  iuris.gq 	10/02/2019 	10/02/2020 	Active 	Free 	Manage Domain 
+  mutables.tk 	10/02/2019 	10/02/2020 	Active 	Free 	Manage Domain 
+  workmeeter.ml 	10/02/2019 	10/02/2020 	Active 	Free 	Manage Domain 
+  weather-on-demand.gq 	10/02/2019 	10/02/2020 	Active 	Free 	Manage Domain 
+  pending.cf 	10/02/2019 	10/02/2020 	Active 	Free 	Manage Domain 
+  provable.tk 	10/02/2019 	10/02/2020 	Active 	Free 	Manage Domain 
+  projectstm.gq 	10/02/2019 	10/02/2020 	Active 	Free 	Manage Domain 
+  projectstm.tk 	10/02/2019 	10/02/2020 	Active 	Free 	Manage Domain 
+  le-vrai-debat.ml 	10/02/2019 	10/02/2020 	Active 	Free 	Manage Domain 
+  smart-litigation.ml 	10/02/2019 	10/02/2020 	Active 	Free 	Manage Domain 
+  signedtm.tk 	10/02/2019 	10/02/2020 	Active 	Free 	Manage Domain 
+  u-nion.info 	22/07/2019 	22/07/2020 	Active 	Paid 	Manage Domain 
+
+"m69@iph.heliohost.org":
+ "@": { RP: "m69.iph.heliohost.org. ." }
+ _dates: |-
+  borderless-banking.gq   25/07/2019  25/07/2020  Active  Free  Manage Domain
+  borderless-banking.tk   25/07/2019  25/07/2020  Active  Free  Manage Domain
+  borderless-land.ml  25/07/2019  25/07/2020  Active  Free  Manage Domain
+  virtual-land.gq   25/07/2019  25/07/2020  Active  Free  Manage Domain
+  land.cf   25/07/2019  25/07/2020  Active  Free  Manage Domain
+  vland.gq  25/07/2019  25/07/2020  Active  Free  Manage Domain
+  timebank.ml   25/07/2019  25/07/2020  Active  Free  Manage Domain
+  safetm.ml   25/07/2019  25/07/2020  Active  Free  Manage Domain
+  medical-ledger.ml   31/07/2019  31/07/2020  Active  Free  Manage Domain
+  ledgertm.ml   31/07/2019  31/07/2020  Active  Free  Manage Domain
+  assetm.gq   31/07/2019  31/07/2020  Active  Free  Manage Domain
+  assetsm.ga  31/07/2019  31/07/2020  Active  Free  Manage Domain
+  exploreur.ml  31/07/2019  31/07/2020  Active  Free  Manage Domain
+  bitmark.ml  31/07/2019  31/07/2020  Active  Free  Manage Domain
+  tribes.gq   31/07/2019  31/07/2020  Active  Free  Manage Domain
+  on-demand.tk  31/07/2019  31/07/2020  Active  Free  Manage Domain
+  qbtm.gq   31/07/2019  31/07/2020  Active  Free  Manage Domain
+  qbtm.ml   31/07/2019  31/07/2020  Active  Free  Manage Domain
+  shqb.ml   31/07/2019  31/07/2020  Active  Free  Manage Domain
+  ehrtm.ml  31/07/2019  31/07/2020  Active  Free  Manage Domain
+  recordtm.ml   31/07/2019  31/07/2020  Active  Free  Manage Domain
+  systemtm.ml   31/07/2019  31/07/2020  Active  Free  Manage Domain
+  ersm.gq   31/07/2019  31/07/2020  Active  Free  Manage Domain
+  bopsm.gq  31/07/2019  31/07/2020  Active  Free  Manage Domain
+  matters.tk  31/07/2019  31/07/2020  Active  Free  Manage Domain
+  humanitysm.ga   02/08/2019  02/08/2020  Active  Free  Manage Domain
+  forcesm.cf  02/08/2019  02/08/2020  Active  Free  Manage Domain
+  current-see.ml  02/08/2019  02/08/2020  Active  Free  Manage Domain
+  glog.gq   02/08/2019  02/08/2020  Active  Free  Manage Domain
+
+iggyl@sniptext.com:
+ "@": { RP: "iggyl.sniptext.com. ." }
+ _dates: |-
+  vitamine-gc.cf 	24/07/2018 	24/07/2019 	Suspended 	Free 	Manage Domain 
+  vitamine-gc.tk 	24/07/2018 	24/07/2019 	Suspended 	Free 	Manage Domain 
+  thetransitioner.cf 	24/07/2018 	24/07/2019 	Suspended 	Free 	Manage Domain 
+  thetransitioner.ga 	24/07/2018 	24/07/2019 	Suspended 	Free 	Manage Domain 
+  timebank.cf 	24/07/2018 	24/07/2019 	Suspended 	Free 	Manage Domain 
+  2gether.international 	31/07/2018 	31/07/2020 	Active 	Paid 	Manage Domain 
+  lovecoins.tk 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  timebank.ga 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  opiniontm.tk 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  publiquetm.tk 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  publiquetm.gq 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  opiniontm.gq 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  sitemaptm.tk 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  quantatm.tk 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  quantatm.ml 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  quantatm.ga 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  quantatm.gq 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  cerestm.tk 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  ricetm.tk 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  ricordtm.tk 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  initiativetm.tk 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  initiativetm.gq 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  referendum.gq 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  zadland.gq 	04/08/2019 	04/08/2020 	Active 	Free 	Manage Domain 
+  backsm.ml 	04/08/2019 	04/08/2020 	Active 	Free 	Manage Domain 
+  dids.ml 	06/08/2019 	06/08/2020 	Active 	Free 	Manage Domain 
+  mdsm.gq 	06/08/2019 	06/08/2020 	Active 	Free 	Manage Domain 
+  listed.ml 	06/08/2019 	06/08/2020 	Active 	Free 	Manage Domain 
+  seensm.ml 	06/08/2019 	06/08/2020 	Active 	Free 	Manage Domain 
+
+idn.*:
+ "@": { RP: "iggyl.sniptext.com. ." }
+ _dates: |-
+  lovecoins.tk 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  gcoins.gq 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  timebank.ga 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  opiniontm.tk 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  publiquetm.tk 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  publiquetm.gq 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  opiniontm.gq 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  sitemaptm.tk 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  quantatm.tk 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  quantatm.ml 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  quantatm.ga 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  quantatm.gq 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  cerestm.tk 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  ricetm.tk 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+  ricordtm.tk 	09/01/2019 	09/01/2020 	Active 	Free 	Manage Domain 
+
+essenctango@gmail.com:
+ "@": { RP: "essenctango.gmail.com. ." }
+ _dates: |-
+  essencetango.ga 	05/11/2018 	05/11/2019 	Active 	Free 	Manage Domain 
+  essencetango.gq 	06/11/2018 	06/11/2019 	Active 	Free 	Manage Domain 
+  essencetango.tk 	06/11/2018 	06/11/2019 	Active 	Free 	Manage Domain 
+  xn--ir8hop.tk 	06/11/2018 	06/11/2019 	Active 	Free 	Manage Domain 
+  xn--ir8hop.cf 	06/11/2018 	06/11/2019 	Active 	Free 	Manage Domain 
+  essencetango.cf 	11/11/2018 	11/11/2019 	Active 	Free 	Manage Domain 
+  xn--147h.gq 	11/11/2018 	11/11/2019 	Active 	Free 	Manage Domain 
+  xn--147h.ml 	11/11/2018 	11/11/2019 	Active 	Free 	Manage Domain 
+  tangosr.ml 	16/04/2019 	16/04/2020 	Active 	Free 	Manage Domain 
+  framasite.tk 	08/05/2019 	08/05/2020 	Active 	Free 	Manage Domain 
+  buckettm.ml 	22/05/2019 	22/05/2020 	Active 	Free 	Manage Domain 
+  everythingtm.tk 	22/05/2019 	22/05/2020 	Active 	Free 	Manage Domain 
+  410tm.gq 	03/06/2019 	03/06/2020 	Active 	Free 	Manage Domain 
+  staticsm.ml 	03/06/2019 	03/06/2020 	Active 	Free 	Manage Domain 
+  discoversm.tk 	22/06/2019 	22/06/2020 	Active 	Free 	Manage Domain 
+  discovertm.ml 	22/06/2019 	22/06/2020 	Active 	Free 	Manage Domain 
+  datasm.ml 	22/06/2019 	22/06/2020 	Active 	Free 	Manage Domain 
+  datatm.ml 	22/06/2019 	22/06/2020 	Active 	Free 	Manage Domain 
+  librasm.tk 	22/06/2019 	22/06/2020 	Active 	Free 	Manage Domain 
+  libratm.ml 	22/06/2019 	22/06/2020 	Active 	Free 	Manage Domain 
+  privatm.ml 	22/06/2019 	22/06/2020 	Active 	Free 	Manage Domain 
+  valuetm.tk 	22/06/2019 	22/06/2020 	Active 	Free 	Manage Domain 
+  xn--hvg.tk 	22/06/2019 	22/06/2020 	Active 	Free 	Manage Domain 
+  presencetm.tk 	23/06/2019 	23/06/2020 	Active 	Free 	Manage Domain 
+  tkitoi.tk 	23/06/2019 	23/06/2020 	Active 	Free 	Manage Domain 
+  xn--360-ufa.ml 	23/06/2019 	23/06/2020 	Active 	Free 	Manage Domain 
+  familytm.tk 	02/07/2019 	02/07/2020 	Active 	Free 	Manage Domain 
+  trustedtm.ml 	02/07/2019 	02/07/2020 	Active 	Free 	Manage Domain 
+  discoverysm.tk 	02/07/2019 	02/07/2020 	Active 	Free 	Manage Domain 
+  explorertm.ml 	02/07/2019 	02/07/2020 	Active 	Free 	Manage Domain 
+  prostatation.gq 	02/07/2019 	02/07/2020 	Active 	Free 	Manage Domain 
+  datasm.gq 	02/07/2019 	02/07/2020 	Active 	Free 	Manage Domain 
+  tracetm.ml 	02/07/2019 	02/07/2020 	Active 	Free 	Manage Domain 
+  tradesm.ml 	02/07/2019 	02/07/2020 	Active 	Free 	Manage Domain 
+  gcfs.ml 	14/09/2019 	14/09/2020 	Active 	Free 	Manage Domain 
+  rxthm.ml 	14/09/2019 	14/12/2019 	Active 	Free 	Manage Domain 
+  shql.tk 	14/09/2019 	14/09/2020 	Active 	Free 	Manage Domain 
+  zonetm.ml 	14/09/2019 	14/09/2020 	Active 	Free 	Manage Domain 
+  3pins.ml 	14/09/2019 	14/09/2020 	Active 	Free 	Manage Domain 
+  mgctm.gq 	14/09/2019 	14/08/2020 	Active 	Free 	Manage Domain 
+  otltm.ml 	14/09/2019 	14/08/2020 	Active 	Free 	Manage Domain 
+  phrtm.ml 	14/09/2019 	14/06/2020 	Active 	Free 	Manage Domain 
+  clue.ml 	14/09/2019 	14/09/2020 	Active 	Free 	Manage Domain 
+  commons.cf 	14/09/2019 	14/09/2020 	Active 	Free 	Manage Domain 
+  dcom.ml 	14/09/2019 	14/08/2020 	Active 	Free 	Manage Domain 
+  rythm.cf 	14/09/2019 	14/08/2020 	Active 	Free 	Manage Domain 
+  mgctm.ml 	14/09/2019 	14/09/2020 	Active 	Free 	Manage Domain 
+  gatetm.tk 	14/09/2019 	14/09/2020 	Active 	Free 	Manage Domain 
+  loginsm.tk 	14/09/2019 	14/09/2020 	Active 	Free 	Manage Domain 
+  jsonweb.tk 	14/09/2019 	14/09/2020 	Active 	Free 	Manage Domain 
+  nutrium.ml 	02/10/2019 	02/10/2020 	Active 	Free 	Manage Domain
+  weather-on-demand.gq 	02/10/2019 	02/10/2020 	Active 	Free 	Manage Domain 
+  marketsm.ml 	02/10/2019 	02/10/2020 	Active 	Free 	Manage Domain 
+  omix.gq 	02/10/2019 	02/10/2020 	Active 	Free 	Manage Domain 
+  omicsm.tk 	02/10/2019 	02/10/2020 	Active 	Free 	Manage Domain 
+  omicsm.ml 	02/10/2019 	02/10/2020 	Active 	Free 	Manage Domain 
+
+evolution.gcb:
+ "@": { RP: "evolution.gc-bank.org. ." }
+ _dates: |-
+  evolutiontm.tk 	07/02/2019 	07/02/2020 	Active 	Free 	Manage Domain 
+  transformeurs.ml 	07/02/2019 	07/02/2020 	Active 	Free 	Manage Domain 
+  centertm.tk 	07/02/2019 	07/02/2020 	Active 	Free 	Manage Domain 
+  rostertm.ml 	07/02/2019 	07/02/2020 	Active 	Free 	Manage Domain 
+  kyctm.ml 	07/02/2019 	07/02/2020 	Active 	Free 	Manage Domain 
+  kvstm.ml 	07/02/2019 	07/02/2020 	Active 	Free 	Manage Domain 
+  transformertm.gq 	07/02/2019 	07/02/2020 	Active 	Free 	Manage Domain 
+  urnsm.ml 	02/04/2019 	02/04/2020 	Active 	Free 	Manage Domain 
+  irfo.ml 	02/04/2019 	02/04/2020 	Active 	Free 	Manage Domain 
+  irfo.gq 	02/04/2019 	02/04/2020 	Active 	Free 	Manage Domain 
+  litigation.tk 	02/04/2019 	02/04/2020 	Active 	Free 	Manage Domain 
+  cnnr.gq 	02/04/2019 	02/04/2020 	Active 	Free 	Manage Domain 
+  participetv.ml 	02/04/2019 	02/04/2020 	Active 	Free 	Manage Domain 
+  cosmostv.ml 	02/04/2019 	02/04/2020 	Active 	Free 	Manage Domain 
+  cnnp.ml 	02/04/2019 	02/04/2020 	Active 	Free 	Manage Domain 
+  shrtm.ml 	07/04/2019 	07/04/2020 	Active 	Free 	Manage Domain 
+  tttm.tk 	07/04/2019 	07/04/2020 	Active 	Free 	Manage Domain 
+  mmtm.tk 	07/04/2019 	07/04/2020 	Active 	Free 	Manage Domain 
+  gctm.gq 	07/04/2019 	07/04/2020 	Active 	Free 	Manage Domain 
+  gctm.ml 	07/04/2019 	07/04/2020 	Active 	Free 	Manage Domain 
+  zerotm.ml 	21/04/2019	21/04/2020	ACTIVE	Free	Manage Domain 	 
+  decision40.gq 	21/04/2019	21/04/2020	ACTIVE	Free	Manage Domain 	 
+  4p0tm.tk 	21/04/2019	21/04/2020	ACTIVE	Free	Manage Domain 	 
+  00tm.tk 	21/04/2019	21/04/2020	ACTIVE	Free	Manage Domain 	 
+  0asm.tk 	21/04/2019	21/04/2020	ACTIVE	Free	Manage Domain 	 
+  01tm.ml 	21/04/2019	21/04/2020	ACTIVE	Free	Manage Domain 	 
+  industry40.tk 	21/04/2019 	21/04/2020 	Active 	Free 	Manage Domain 
+  4dot0.tk 	21/04/2019 	21/04/2020 	Active 	Free 	Manage Domain 
+  4dot0.ml 	21/04/2019 	21/04/2020 	Active 	Free 	Manage Domain 
+  4point0.tk 	21/04/2019 	21/04/2020 	Active 	Free 	Manage Domain 
+  4point0.gq 	21/04/2019 	21/04/2020 	Active 	Free 	Manage Domain 
+  zerotm.tk 	21/04/2019 	21/04/2020 	Active 	Free 	Manage Domain 
+  bleusm.tk 	21/04/2019 	21/04/2020 	Active 	Free 	Manage Domain 
+  bluer.ml 	21/04/2019 	21/04/2020 	Active 	Free 	Manage Domain 
+  bluetm.tk 	21/04/2019 	21/04/2020 	Active 	Free 	Manage Domain 
+  ridicule.ml 	21/04/2019 	21/04/2020 	Active 	Free 	Manage Domain 
+  ridicule.ga 	21/04/2019 	21/04/2020 	Active 	Free 	Manage Domain 
+  ridicule.gq 	21/04/2019 	21/04/2020 	Active 	Free 	Manage Domain 
+  industrytm.gq 	21/04/2019 	21/04/2020 	Active 	Free 	Manage Domain 
+  industrytm.ml 	21/04/2019 	21/04/2020 	Active 	Free 	Manage Domain 
+  industrytm.tk 	21/04/2019 	21/04/2020 	Active 	Free 	Manage Domain 
+  bitmark.tk 	21/04/2019 	21/04/2020 	Active 	Free 	Manage Domain 
+  bluer.ml 	30/09/2019 	30/09/2020 	Active 	Free 	Manage Domain 
+  bluetm.tk 	30/09/2019 	30/09/2020 	Active 	Free 	Manage Domain 
+  4dot0.ml 	30/09/2019 	30/09/2020 	Active 	Free 	Manage Domain 
+  4dot0.tk 	30/09/2019 	30/09/2020 	Active 	Free 	Manage Domain 
+  4point0.gq 	30/09/2019 	30/09/2020 	Active 	Free 	Manage Domain 
+  nutrium.gq 	30/09/2019 	30/09/2020 	Active 	Free 	Manage Domain 
+
+
+timebank@gc-bank.org:
+ "@": { RP: "timebank.gc-bank.org. ." }
+ _dates: |-
+  timebank.gq 	12/11/2018 	12/05/2019 	Active 	Free 	Manage Domain 
+  xn--lq8h.ml 	12/11/2018 	12/11/2019 	Active 	Free 	Manage Domain 
+  xn--lv8h.gq 	12/11/2018 	12/11/2019 	Active 	Free 	Manage Domain 
+  xn--l7g.ml 	12/11/2018 	12/11/2019 	Active 	Free 	Manage Domain 
+  xn--l7g.tk 	12/11/2018 	12/11/2019 	Active 	Free 	Manage Domain 
+  xn--147h.ga 	12/11/2018 	12/11/2019 	Active 	Free 	Manage Domain 
+  xn--047h.ml 	12/11/2018 	12/11/2019 	Active 	Free 	Manage Domain 
+  xn--047h.gq 	12/11/2018 	12/11/2019 	Active 	Free 	Manage Domain 
+  xn--e18h.ml 	12/11/2018 	12/11/2019 	Active 	Free 	Manage Domain 
+  xn--du8h.cf 	12/11/2018 	12/11/2019 	Active 	Free 	Manage Domain 
+  xn--0m8h7u.tk 	12/11/2018 	12/11/2019 	Active 	Free 	Manage Domain 
+  xn--u7h.cf 	12/11/2018 	12/11/2019 	Active 	Free 	Manage Domain 
+  xn--nt8h.ga 	12/11/2018 	12/11/2019 	Active 	Free 	Manage Domain 
+  xn--l9h.gq 	13/11/2018 	13/11/2019 	Active 	Free 	Manage Domain 
+  xn--chi.tk 	13/11/2018 	13/11/2019 	Active 	Free 	Manage Domain 
+  xn--chi.ml 	13/11/2018 	13/11/2019 	Active 	Free 	Manage Domain 
+  xn--chi.gq 	13/11/2018 	13/11/2019 	Active 	Free 	Manage Domain 
+  xn--chi.cf 	13/11/2018 	13/11/2019 	Active 	Free 	Manage Domain 
+  xn--chi.ga 	13/11/2018 	13/11/2019 	Active 	Free 	Manage Domain 
+  r-evolution.ml 	13/11/2018 	13/11/2019 	Active 	Free 	Manage Domain 
+  xn--tm-1762a.tk 	13/11/2018 	13/11/2019 	Active 	Free 	Manage Domain 
+  xn--tm-1762a.ml 	13/11/2018 	13/11/2019 	Active 	Free 	Manage Domain 
+  xn--sm-id72a.tk 	13/11/2018 	13/11/2019 	Active 	Free 	Manage Domain 
+  xn--sm-id72a.ml 	13/11/2018 	13/11/2019 	Active 	Free 	Manage Domain 
+  xn--sm-id72a.gq 	13/11/2018 	13/11/2019 	Active 	Free 	Manage Domain 
+  xn--rt8h.tk 	13/11/2018 	13/11/2019 	Active 	Free 	Manage Domain 
+  xn--in8h.ml 	13/11/2018 	13/11/2019 	Active 	Free 	Manage Domain 
+  xn--in8h.tk 	13/11/2018 	13/11/2019 	Active 	Free 	Manage Domain 
+  xn--rt8h.gq 	13/11/2018 	13/11/2019 	Active 	Free 	Manage Domain 
+  xn--tm-qx72a.ml 	13/11/2018 	13/11/2019 	Active 	Free 	Manage Domain 
+
+michel@iph.heliohost.org:
+ "@": { RP: "michel.iph.heliohost.org. ." }
+ _dates: |-
+  portfoliotm.tk	12/02/2019	12/02/2020	ACTIVE	Free	Manage	Domain
+  aniontm.ml	18/03/2019	18/03/2020	ACTIVE	Free	Manage	Domain
+  appsm.ml	07/05/2019	07/05/2020	ACTIVE	Free	Manage	Domain
+  decapital.ml	21/03/2019	21/03/2020	ACTIVE	Free	Manage	Domain
+  dhsm.tk	18/03/2019	18/03/2020	ACTIVE	Free	Manage	Domain
+  distributed.gq	18/03/2019	18/03/2020	ACTIVE	Free	Manage	Domain
+  distributed.ml	18/03/2019	18/03/2020	ACTIVE	Free	Manage	Domain
+  dpki.ml	12/02/2019	12/02/2020	ACTIVE	Free	Manage	Domain
+  espoirtv.ml	21/03/2019	21/03/2020	ACTIVE	Free	Manage	Domain
+  gazettegj.ml	07/05/2019	07/05/2020	ACTIVE	Free	Manage	Domain
+  humaine.ml	21/03/2019	21/03/2020	ACTIVE	Free	Manage	Domain
+  humain.ml	21/03/2019	21/03/2020	ACTIVE	Free	Manage	Domain
+  libretm.ml	21/03/2019	21/03/2020	ACTIVE	Free	Manage	Domain
+  lmrg.ml	21/03/2019	21/03/2020	ACTIVE	Free	Manage	Domain
+  media-libre.ml	21/03/2019	21/03/2020	ACTIVE	Free	Manage	Domain
+  medialibre.ml	21/03/2019	21/03/2020	ACTIVE	Free	Manage	Domain
+  mrgtm.tk	21/03/2019	21/03/2020	ACTIVE	Free	Manage	Domain
+  numerique.ml	07/05/2019	07/05/2020	ACTIVE	Free	Manage	Domain
+  portfoliotm.tk	12/02/2019	12/02/2020	ACTIVE	Free	Manage	Domain
+  proofs.ml	12/02/2019	12/02/2020	ACTIVE	Free	Manage	Domain
+  qrsm.tk	20/03/2019	20/03/2020	ACTIVE	Free	Manage	Domain
+  ricetm.ml	12/02/2019	12/02/2020	ACTIVE	Free	Manage	Domain
+  rougetm.ml	21/03/2019	21/03/2020	ACTIVE	Free	Manage	Domain
+  rougetm.tk	21/03/2019	21/03/2020	ACTIVE	Free	Manage	Domain
+  semaphore.tk	18/03/2019	18/03/2020	ACTIVE	Free	Manage	Domain
+  talenttm.ga	20/03/2019	20/03/2020	ACTIVE	Free	Manage	Domain
+  talunc.gq	20/03/2019	20/03/2020	ACTIVE	Free	Manage	Domain
+  talunc.ml	20/03/2019	20/03/2020	ACTIVE	Free	Manage	Domain
+  tokentm.ml	12/02/2019	12/02/2020	ACTIVE	Free	Manage	Domain
+  tokentm.tk	18/03/2019	18/03/2020	ACTIVE	Free	Manage	Domain
+  u-topic.ml	21/03/2019	21/03/2020	ACTIVE	Free	Manage	Domain
+  valuetm.ml	18/03/2019	18/03/2020	ACTIVE	Free	Manage	Domain
+  verite.ml	21/03/2019	21/03/2020	ACTIVE	Free	Manage	Domain
+  xn--tvrit-csad.ml	21/03/2019	21/03/2020	ACTIVE	Free	Manage	Domain
+  xn--vrit-bpad.ml	21/03/2019	21/03/2020	ACTIVE	Free	Manage	Domain
+  xn--vrit-bpad.tk	21/03/2019	21/03/2020	ACTIVE	Free	Manage	Domain
+  portfoliotm.tk 	12/02/2019 	12/02/2020 	Active 	Free 	Manage Domain 
+  dpki.ml 	12/02/2019 	12/02/2020 	Active 	Free 	Manage Domain 
+  ricetm.ml 	12/02/2019 	12/02/2020 	Active 	Free 	Manage Domain 
+  tokentm.ml 	12/02/2019 	12/02/2020 	Active 	Free 	Manage Domain 
+  proofs.ml 	12/02/2019 	12/02/2020 	Active 	Free 	Manage Domain 
+  distributed.gq 	18/03/2019 	18/03/2020 	Active 	Free 	Manage Domain 
+  distributed.ml 	18/03/2019 	18/03/2020 	Active 	Free 	Manage Domain 
+  aniontm.ml 	18/03/2019 	18/03/2020 	Active 	Free 	Manage Domain 
+  dhsm.tk 	18/03/2019 	18/03/2020 	Active 	Free 	Manage Domain 
+  valuetm.ml 	18/03/2019 	18/03/2020 	Active 	Free 	Manage Domain 
+  tokentm.tk 	18/03/2019 	18/03/2020 	Active 	Free 	Manage Domain 
+  semaphore.tk 	18/03/2019 	18/03/2020 	Active 	Free 	Manage Domain 
+  talunc.gq 	20/03/2019 	20/03/2020 	Active 	Free 	Manage Domain 
+  talunc.ml 	20/03/2019 	20/03/2020 	Active 	Free 	Manage Domain 
+  talenttm.ga 	20/03/2019 	20/03/2020 	Active 	Free 	Manage Domain 
+  qrsm.tk 	20/03/2019 	20/03/2020 	Active 	Free 	Manage Domain 
+  decapital.ml 	21/03/2019 	21/03/2020 	Active 	Free 	Manage Domain 
+  espoirtv.ml 	21/03/2019 	21/03/2020 	Active 	Free 	Manage Domain 
+  libretm.ml 	21/03/2019 	21/03/2020 	Active 	Free 	Manage Domain 
+  media-libre.ml 	21/03/2019 	21/03/2020 	Active 	Free 	Manage Domain 
+  medialibre.ml 	21/03/2019 	21/03/2020 	Active 	Free 	Manage Domain 
+  u-topic.ml 	21/03/2019 	21/03/2020 	Active 	Free 	Manage Domain 
+  humain.ml 	21/03/2019 	21/03/2020 	Active 	Free 	Manage Domain 
+  humaine.ml 	21/03/2019 	21/03/2020 	Active 	Free 	Manage Domain 
+  verite.ml 	21/03/2019 	21/03/2020 	Active 	Free 	Manage Domain 
+  xn--vrit-bpad.tk 	21/03/2019 	21/03/2020 	Active 	Free 	Manage Domain 
+  xn--vrit-bpad.ml 	21/03/2019 	21/03/2020 	Active 	Free 	Manage Domain 
+  xn--tvrit-csad.ml 	21/03/2019 	21/03/2020 	Active 	Free 	Manage Domain 
+  mrgtm.tk 	21/03/2019 	21/03/2020 	Active 	Free 	Manage Domain 
+  lmrg.ml 	21/03/2019 	21/03/2020 	Active 	Free 	Manage Domain 
+  rougetm.ml 	21/03/2019 	21/03/2020 	Active 	Free 	Manage Domain 
+  rougetm.tk 	21/03/2019 	21/03/2020 	Active 	Free 	Manage Domain 
+  appsm.ml 	07/05/2019 	07/05/2020 	Active 	Free 	Manage Domain 
+  numerique.ml 	07/05/2019 	07/05/2020 	Active 	Free 	Manage Domain 
+  gazettegj.ml 	07/05/2019 	07/05/2020 	Active 	Free 	Manage Domain 
+  nodesm.tk 	31/05/2019 	31/05/2020 	Active 	Free 	Manage Domain 
+  fstm.ga 	31/05/2019 	31/05/2020 	Active 	Free 	Manage Domain 
+  fstm.ml 	31/05/2019 	31/05/2020 	Active 	Free 	Manage Domain 
+  storetm.gq 	31/05/2019 	31/05/2020 	Active 	Free 	Manage Domain 
+  sktm.tk 	31/05/2019 	31/05/2020 	Active 	Free 	Manage Domain 
+  shtm.tk 	31/05/2019 	31/05/2020 	Active 	Free 	Manage Domain 
+  yasm.ml 	31/05/2019 	31/05/2020 	Active 	Free 	Manage Domain 
+  yotm.tk 	31/05/2019 	31/05/2020 	Active 	Free 	Manage Domain 
+  cgism.ml 	31/05/2019 	31/05/2020 	Active 	Free 	Manage Domain 
+  apitm.tk 	31/05/2019 	31/05/2020 	Active 	Free 	Manage Domain 
+  justicesm.ml 	24/06/2019 	24/06/2020 	Active 	Free 	Manage Domain 
+  logsm.ml 	24/06/2019 	24/06/2020 	Active 	Free 	Manage Domain 
+  safetysm.ml 	24/06/2019 	24/06/2020 	Active 	Free 	Manage Domain 
+  trustedtm.tk 	24/06/2019 	24/06/2020 	Active 	Free 	Manage Domain 
+  in-or-out.tk 	24/06/2019 	24/06/2020 	Active 	Free 	Manage Domain 
+  inorout.tk 	24/06/2019 	24/06/2020 	Active 	Free 	Manage Domain 
+
+
+ric@iph.heliohost.org:
+ "@": { RP: "ric.iph.heliohost.org. ." }
+ _dates: |-
+  xn--ric-0b23b.tk 	10/12/2018 	10/12/2019 	Active 	Free 	Manage Domain 
+  ricetm.gq 	12/12/2018 	12/12/2019 	Active 	Free 	Manage Domain 
+  wisevest.gq 	23/12/2018 	23/12/2019 	Active 	Free 	Manage Domain 
+  yellowtm.gq 	23/12/2018 	23/12/2019 	Active 	Free 	Manage Domain 
+  blockringtm.tk 	07/01/2019 	07/01/2020 	Active 	Free 	Manage Domain 
+  blockringtm.ml 	07/01/2019 	07/01/2020 	Active 	Free 	Manage Domain 
+  blockringtm.gq 	07/01/2019 	07/01/2020 	Active 	Free 	Manage Domain 
+  hostless.tk 	07/01/2019 	07/01/2020 	Active 	Free 	Manage Domain 
+  hostless.ml 	07/01/2019 	07/01/2020 	Active 	Free 	Manage Domain 
+  hostless.ga 	07/01/2019 	07/01/2020 	Active 	Free 	Manage Domain 
+  hostless.cf 	07/01/2019 	07/01/2020 	Active 	Free 	Manage Domain 
+  hostless.gq 	07/01/2019 	07/01/2020 	Active 	Free 	Manage Domain 
+  xn--franais-xxa.ml 	07/01/2019 	07/01/2020 	Active 	Free 	Manage Domain 
+  xn--franais-xxa.tk 	07/01/2019 	07/01/2020 	Active 	Free 	Manage Domain 
+  xn--franaise-v0a.tk 	07/01/2019 	07/01/2020 	Active 	Free 	Manage Domain 
+  xn--franaise-v0a.ml 	07/01/2019 	07/01/2020 	Active 	Free 	Manage Domain 
+  xn--franaise-v0a.gq 	07/01/2019 	07/01/2020 	Active 	Free 	Manage Domain 
+  jaunetm.tk 	07/01/2019 	07/01/2020 	Active 	Free 	Manage Domain 
+  blanctm.tk 	07/01/2019 	07/01/2020 	Active 	Free 	Manage Domain 
+  blanctm.ml 	07/01/2019 	07/01/2020 	Active 	Free 	Manage Domain 
+  initiative.ga 	08/01/2019 	08/01/2020 	Active 	Free 	Manage Domain 
+  initiative.gq 	08/01/2019 	08/01/2020 	Active 	Free 	Manage Domain 
+  initiative.ml 	08/01/2019 	08/01/2020 	Active 	Free 	Manage Domain 
+  michelc.tk 	17/01/2019 	17/01/2020 	Active 	Free 	Manage Domain 
+  chaintm.tk 	17/01/2019 	17/01/2020 	Active 	Free 	Manage Domain 
+  clockchain.tk 	17/01/2019 	17/01/2020 	Active 	Free 	Manage Domain 
+  lotery.ml 	17/01/2019 	17/01/2020 	Active 	Free 	Manage Domain 
+  lotery.gq 	17/01/2019 	17/01/2020 	Active 	Free 	Manage Domain 
+  lotering.tk 	17/01/2019 	17/01/2020 	Active 	Free 	Manage Domain 
+  lotterytm.tk 	17/01/2019 	17/01/2020 	Active 	Free 	Manage Domain 
+  lotterytm.gq 	17/01/2019 	17/01/2020 	Active 	Free 	Manage Domain 
+  lotterytm.ml 	17/01/2019 	17/01/2020 	Active 	Free 	Manage Domain 
+
+sniptext.com:
+ '@':
+  ALIAS: sniptext.com.test-google-a.com
+ 'registrar': { TXT: "https://admin.google.com/sniptext.com/AdminHome?hl=en#Domains" }
+
+union@gc-banktm.com:
+ "@": { RP: "union.gc-banktm.com. ." }
+ _dates: |-
+  u-niontm.ml 	26/01/2019	26/10/2019	ACTIVE	Free	Manage Domain 	 
+  certificatetm.tk 	26/01/2019	26/01/2020	ACTIVE	Free	Manage Domain 	 
+  simulationtm.ga 	26/01/2019	26/01/2020	ACTIVE	Free	Manage Domain 	 
+  certif.ml 	26/01/2019	26/01/2020	ACTIVE	Free	Manage Domain 	 
+  certificatetm.gq 	26/01/2019	26/01/2020	ACTIVE	Free	Manage Domain 	 
+  simu.gq 	26/01/2019	26/01/2020	ACTIVE	Free	Manage Domain 	 
+  onetm.tk 	26/01/2019	26/01/2020	ACTIVE	Free	Manage Domain 	 
+  pays-souverains.tk 	01/02/2019	01/02/2020	ACTIVE	Free	Manage Domain 	 
+  scwo.gq 	01/02/2019	01/02/2020	ACTIVE	Free	Manage Domain 	 
+  omps.gq 	01/02/2019	01/02/2020	ACTIVE	Free	Manage Domain 	 
+  bitwork.ml 	01/02/2019	01/02/2020	ACTIVE	Free	Manage Domain 	 
+  save-the-w.tk 	01/02/2019	01/02/2020	ACTIVE	Free	Manage Domain 	 
+  monopolytm.tk 	01/02/2019	01/02/2020	ACTIVE	Free	Manage Domain 	 
+  demopoly.tk 	01/02/2019	01/02/2020	ACTIVE	Free	Manage Domain 	 
+  ballot.tk 	01/02/2019	01/02/2020	ACTIVE	Free	Manage Domain 	 
+  demopoly.ga 	01/02/2019	01/02/2020	ACTIVE	Free	Manage Domain 	 
+  utrusttm.tk 	01/02/2019	01/02/2020	ACTIVE	Free	Manage Domain 	 
+  hutm.ml 	01/02/2019	01/02/2020	ACTIVE	Free	Manage Domain 	 
+  huringtm.ml 	01/02/2019	01/02/2020	ACTIVE	Free	Manage Domain 	 
+  huring.gq 	01/02/2019	01/02/2020	ACTIVE	Free	Manage Domain 	 
+  the-middle-man.tk 	01/02/2019	01/02/2020	ACTIVE	Free	Manage Domain 	 
+  ipho.gq 	01/02/2019	01/02/2020	ACTIVE	Free	Manage Domain 	 
+  certificatetm.tk 	2019-01-26 	2020-01-26 	Active 	Free 	Manage Domain 
+  simulationtm.ga 	2019-01-26 	2020-01-26 	Active 	Free 	Manage Domain 
+  certif.ml 	2019-01-26 	2020-01-26 	Active 	Free 	Manage Domain 
+  certificatetm.gq 	2019-01-26 	2020-01-26 	Active 	Free 	Manage Domain 
+  simu.gq 	2019-01-26 	2020-01-26 	Active 	Free 	Manage Domain 
+  onetm.tk 	2019-01-26 	2020-01-26 	Active 	Free 	Manage Domain 
+  pending.ml 	2019-01-26 	2020-01-26 	Active 	Free 	Manage Domain 
+  signed.ml 	2019-01-26 	2020-01-26 	Active 	Free 	Manage Domain 
+  current-see.tk 	2019-01-26 	2020-01-26 	Active 	Free 	Manage Domain 
+  u-niontm.ml 	2019-01-26 	2019-10-26 	Active 	Free 	Manage Domain 
+  healthsm.tk 	2019-09-23 	2020-09-23 	Active 	Free 	Manage Domain 
+  wuotai.tk 	2019-09-23 	2020-09-23 	Active 	Free 	Manage Domain 
+  yfsm.tk 	2019-09-24 	2020-09-24 	Active 	Free 	Manage Domain 
+  zonesm.tk 	2019-09-24 	2020-09-24 	Active 	Free 	Manage Domain 
+  nyms.ml 	2019-09-24 	2020-09-24 	Active 	Free 	Manage Domain 
+  otltm.ml 	2019-09-24 	2020-09-24 	Active 	Free 	Manage Domain 
+  cerism.tk 	2019-09-24 	2020-09-24 	Active 	Free 	Manage Domain 
+  trustshop.tk 	2019-09-27 	2020-09-27 	Active 	Free 	Manage Domain 
+  depsm.tk 	2019-09-27 	2020-09-27 	Active 	Free 	Manage Domain 
+  marketsm.tk 	2019-09-27 	2020-09-27 	Active 	Free 	Manage Domain 
+  dynsm.ml 	2019-09-27 	2020-09-27 	Active 	Free 	Manage Domain 
+  dynsm.gq 	2019-09-27 	2020-09-27 	Active 	Free 	Manage Domain 
+  brng.gq 	2019-09-27 	2020-09-27 	Active 	Free 	Manage Domain 
+  deptm.ml 	2019-09-27 	2020-09-27 	Active 	Free 	Manage Domain 
+  omix.ml 	2019-09-27 	2020-09-27 	Active 	Free 	Manage Domain 
+  asksm.ml 	2019-09-27 	2020-09-27 	Active 	Free 	Manage Domain 
+  tradetm.ml 	2019-09-27 	2020-09-27 	Active 	Free 	Manage Domain 
+  okdoc.tk 	2019-09-27 	2020-09-27 	Active 	Free 	Manage Domain 
+  edpsm.ml 	2019-09-27 	2020-09-27 	Active 	Free 	Manage Domain 
+  hellodoc.tk 	2019-09-27 	2020-09-27 	Active 	Free 	Manage Domain 
+  hellodoc.gq 	2019-09-27 	2020-09-27 	Active 	Free 	Manage Domain 
+  healthtm.gq 	2019-09-27 	2020-09-27 	Active 	Free 	Manage Domain 
+  healthtm.ml 	2019-09-27 	2020-09-27 	Active 	Free 	Manage Domain 
+  kissofhealth.tk 	2019-09-27 	2020-09-27 	Active 	Free 	Manage Domain 
+  healthium.gq 	2019-09-27 	2020-09-27 	Active 	Free 	Manage Domain 
+  exquis.ml 	2019-10-04 	2020-10-04 	Active 	Free 	Manage Domain 
+  qrcosm.tk 	2019-10-04 	2020-01-04 	Active 	Free 	Manage Domain 
+
+
+michelcombes@advancementofcivilizationeffort.org:
+ "@": { RP: "michelcombes.advancementofcivilizationeffort.org. ." }
+ _dates: |-
+  iphs.ga 	26/09/2018 	26/09/2019 	Active 	Free 	Manage Domain 
+  toxiq.tk 	19/10/2018 	19/10/2019 	Active 	Free 	Manage Domain 
+  knowledger.tk 	19/10/2018 	19/10/2019 	Active 	Free 	Manage Domain 
+  dworld.gq 	19/10/2018 	19/10/2019 	Active 	Free 	Manage Domain 
+  sayitlouder.cf 	19/10/2018 	19/10/2019 	Active 	Free 	Manage Domain 
+  sayitlouder.tk 	19/10/2018 	19/10/2019 	Active 	Free 	Manage Domain 
+  sayitlouder.gq 	19/10/2018 	19/10/2019 	Active 	Free 	Manage Domain 
+  adlt.tk 	20/10/2018 	20/10/2019 	Active 	Free 	Manage Domain 
+  mutable.gq 	21/10/2018 	21/10/2019 	Active 	Free 	Manage Domain 
+  iplt.tk 	22/10/2018 	22/10/2019 	Active 	Free 	Manage Domain 
+  irfo.cf 	01/11/2018 	01/11/2019 	Active 	Free 	Manage Domain 
+  irfo.tk 	01/11/2018 	01/11/2019 	Active 	Free 	Manage Domain 
+  xn--one--ou3b.tk 	03/11/2018 	03/11/2019 	Active 	Free 	Manage Domain 
+  xn--one--ow4b.tk 	03/11/2018 	03/11/2019 	Active 	Free 	Manage Domain 
+  xn--g77hka.ml 	04/11/2018 	04/11/2019 	Active 	Free 	Manage Domain 
+  xn--g77hka.cf 	04/11/2018 	04/11/2019 	Active 	Free 	Manage Domain 
+  xn--g77hka.ga 	04/11/2018 	04/11/2019 	Active 	Free 	Manage Domain 
+  xn--nw8h.tk 	04/11/2018 	04/10/2019 	Active 	Free 	Manage Domain 
+  xn--nw8h.gq 	04/11/2018 	04/11/2019 	Active 	Free 	Manage Domain 
+  xn--4s8h.tk 	04/11/2018 	04/11/2019 	Active 	Free 	Manage Domain 
+  xn--4s8h.gq 	04/11/2018 	04/11/2019 	Active 	Free 	Manage Domain 
+  xn--mt8h.tk 	04/11/2018 	04/11/2019 	Active 	Free 	Manage Domain 
+  xn--mt8h.ml 	04/11/2018 	04/11/2019 	Active 	Free 	Manage Domain 
+  xn--nw8h.ml 	04/11/2018 	04/11/2019 	Active 	Free 	Manage Domain 
+  ricorg.gq 	18/12/2018 	18/12/2019 	Active 	Free 	Manage Domain 
+  ricord.tk 	18/12/2018 	18/12/2019 	Active 	Free 	Manage Domain 
+  ricord.ml 	18/12/2018 	18/12/2019 	Active 	Free 	Manage Domain 
+  jaune.gq 	22/12/2018 	22/12/2019 	Active 	Free 	Manage Domain 
+  voter.gq 	06/01/2019 	06/01/2020 	Active 	Free 	Manage Domain 
+  xn--evolution-fna.gq 	06/01/2019 	06/01/2020 	Active 	Free 	Manage Domain 
+  xn--assemble-h1a.ga 	06/01/2019 	06/01/2020 	Active 	Free 	Manage Domain 
+  xn--j77hya.tk 	06/01/2019 	06/01/2020 	Active 	Free 	Manage Domain 
+  xn--j77hya.ga 	06/01/2019 	06/01/2020 	Active 	Free 	Manage Domain 
+  xn--j77hya.gq 	06/01/2019 	06/01/2020 	Active 	Free 	Manage Domain 
+  citoyenne.ml 	06/01/2019 	06/01/2020 	Active 	Free 	Manage Domain 
+  citoyenne.gq 	06/01/2019 	06/01/2020 	Active 	Free 	Manage Domain 
+  one42.ml 	27/02/2019 	27/02/2020 	Active 	Free 	Manage Domain 
+  sparktm.tk 	28/02/2019 	29/02/2020 	Active 	Free 	Manage Domain 
+  sparkstm.gq 	28/02/2019 	29/02/2020 	Active 	Free 	Manage Domain 
+
+essencetango.gq:
+ _expires: { TXT: "06/11/2019" }
+ "@":
+  A: 104.198.14.52
+ contact:
+  RP: "essenctango@gmail.com. ."
+  TXT:
+   - "gecos=Essence Tango, essenctango@gmail.com, +41"
+   - "addr1=Chemin de la Chiesaz 8, Ecublens 1024 VD"
+   - "phone=+41 001 484 4166574"
+ _date: { TXT: "essencetango.gq 	06/11/2018 	06/11/2019 	Active 	Free 	Manage Domain " }
+
+stuccind.hotmail.com:
+ contact:
+  TXT:
+   - "addr1=Rue Auguste Matringe 27 - 1180 Rolle - SWITZERLAND"
+   - "email=stuccind@hotmail.com"
+   - "phone=+41.787621290"
+
+omps:
+ contact:
+  TXT:
+   - "gecos=omps c/o Combes, omps@gc-bank.org"
+   - "addr1=14365 Bancroft Ave. #37, San Leandro, CA 94578"
+   - "phone=+1"
+ info: { TXT: "Organisation Mondiale des Pays Souverains" }
+
+omps@gc-bank.org:
+ "@": { RP: "omps.gc-bank.org. ." }
+ _dates: |-
+  pays-souverains.tk 	01/02/2019 	01/02/2020 	Active 	Free 	Manage Domain 
+  scwo.gq 	01/02/2019 	01/02/2020 	Active 	Free 	Manage Domain 
+  omps.gq 	01/02/2019 	01/02/2020 	Active 	Free 	Manage Domain 
+  bitwork.ml 	01/02/2019 	01/02/2020 	Active 	Free 	Manage Domain 
+  save-the-w.tk 	01/02/2019 	01/02/2020 	Active 	Free 	Manage Domain 
+  monopolytm.tk 	01/02/2019 	01/02/2020 	Active 	Free 	Manage Domain 
+  demopoly.tk 	01/02/2019 	01/02/2020 	Active 	Free 	Manage Domain 
+  ballot.tk 	01/02/2019 	01/02/2020 	Active 	Free 	Manage Domain 
+  demopoly.ga 	01/02/2019 	01/02/2020 	Active 	Free 	Manage Domain 
+  utrusttm.tk 	01/02/2019 	01/02/2020 	Active 	Free 	Manage Domain 
+  hutm.ml 	01/02/2019 	01/02/2020 	Active 	Free 	Manage Domain 
+  huringtm.ml 	01/02/2019 	01/02/2020 	Active 	Free 	Manage Domain 
+  huring.gq 	01/02/2019 	01/02/2020 	Active 	Free 	Manage Domain 
+  the-middle-man.tk 	01/02/2019 	01/02/2020 	Active 	Free 	Manage Domain 
+  ipho.gq 	01/02/2019 	01/02/2020 	Active 	Free 	Manage Domain 
