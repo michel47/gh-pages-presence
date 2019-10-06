@@ -26,6 +26,6 @@ You can find the source code for Jekyll at GitHub:
 
 -->
 
-[1]: notes/
-[2]: articles/
-[3]: documents/
+[1]: ../notes/
+[2]: ../articles/
+[3]: ../documents/
